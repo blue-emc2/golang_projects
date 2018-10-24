@@ -35,7 +35,7 @@ func (l *Lexer) NextToken() token.Token {
 	switch l.ch {
 	case '=':
 		if l.peekChar() == '=' {
-			ch := l.ch // 現在位置の"="
+			ch := l.ch   // 現在位置の"="
 			l.readChar() // 次の"="
 			literal := string(ch) + string(l.ch)
 			tok = token.Token{Type: token.EQ, Literal: literal}
@@ -46,7 +46,7 @@ func (l *Lexer) NextToken() token.Token {
 		tok = newToken(token.MINUS, l.ch)
 	case '!':
 		if l.peekChar() == '=' {
-			ch := l.ch // 現在位置の"!"
+			ch := l.ch   // 現在位置の"!"
 			l.readChar() // 次の"="
 			literal := string(ch) + string(l.ch)
 			tok = token.Token{Type: token.NOT_EQ, Literal: literal}
@@ -80,7 +80,7 @@ func (l *Lexer) NextToken() token.Token {
 		tok.Type = token.EOF
 	default:
 		if isLetter(l.ch) {
-			tok.Literal = l.readIndentifier()
+			tok.Literal = l.readIdentifier()
 			tok.Type = token.LookupIdent(tok.Literal)
 			return tok
 		} else if isDigit(l.ch) {
@@ -100,7 +100,7 @@ func newToken(tokenType token.TokenType, ch byte) token.Token {
 	return token.Token{Type: tokenType, Literal: string(ch)}
 }
 
-func (l *Lexer) readIndentifier() string {
+func (l *Lexer) readIdentifier() string {
 	position := l.position
 	for isLetter(l.ch) {
 		l.readChar()
