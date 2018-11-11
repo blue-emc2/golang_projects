@@ -2,9 +2,10 @@ package parser
 
 import (
 	"fmt"
-	"golang_projects/monkey/ast"
-	"golang_projects/monkey/lexer"
 	"testing"
+
+	"github.com/blue-emc2/monkey/ast"
+	"github.com/blue-emc2/monkey/lexer"
 )
 
 func TestReturnStatements(t *testing.T) {

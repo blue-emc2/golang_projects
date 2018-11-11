@@ -3,7 +3,7 @@ package lexer
 import (
 	"testing"
 
-	"golang_projects/monkey/token"
+	"github.com/blue-emc2/monkey/token"
 )
 
 func TestNextToken(t *testing.T) {

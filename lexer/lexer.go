@@ -1,7 +1,7 @@
 package lexer
 
 import (
-	"golang_projects/monkey/token"
+	"github.com/blue-emc2/monkey/token"
 )
 
 type Lexer struct {

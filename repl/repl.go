@@ -1,13 +1,13 @@
 package repl
 
 import (
-	"fmt"
 	"bufio"
+	"fmt"
 	"io"
-	"golang_projects/monkey/lexer"
-	"golang_projects/monkey/token"
-)
 
+	"github.com/blue-emc2/monkey/lexer"
+	"github.com/blue-emc2/monkey/token"
+)
 
 const PROMPT = ">> "
 
@@ -18,7 +18,7 @@ func Start(in io.Reader, out io.Writer) {
 		fmt.Printf(PROMPT)
 		scanned := scanner.Scan()
 		if !scanned {
-			return ;
+			return
 		}
 
 		line := scanner.Text()

@@ -1,8 +1,9 @@
 package ast
 
 import (
-	"golang_projects/monkey/token"
 	"testing"
+
+	"github.com/blue-emc2/monkey/token"
 )
 
 func TestString(t *testing.T) {

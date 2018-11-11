@@ -1,10 +1,11 @@
 package main
 
 import (
-	"os"
 	"fmt"
+	"os"
 	"os/user"
-	"golang_projects/monkey/repl"
+
+	"github.com/blue-emc2/monkey/repl"
 )
 
 func main() {

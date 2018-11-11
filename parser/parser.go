@@ -2,10 +2,11 @@ package parser
 
 import (
 	"fmt"
-	"golang_projects/monkey/ast"
-	"golang_projects/monkey/lexer"
-	"golang_projects/monkey/token"
 	"strconv"
+
+	"github.com/blue-emc2/monkey/ast"
+	"github.com/blue-emc2/monkey/lexer"
+	"github.com/blue-emc2/monkey/token"
 )
 
 const (
